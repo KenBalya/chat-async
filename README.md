@@ -10,3 +10,9 @@ Explanation: Each time a client is ran using run cargo --bin client, it will sea
 -    server: ![alt text](image-5.png)
 Explanation: changing the port to 8080 in both the client and server configurations would still use the WebSocket protocol. The use of the WebSocket protocol is defined in the Rust code by employing the tokio_websockets crate, which handles WebSocket connections regardless of the specific port used, as indicated by the use of ServerBuilder and ClientBuilder from the tokio_websockets crate for establishing WebSocket connections.
 
+3.
+![alt text](image-6.png)
+
+Explanation: I added a description on the welcoming message on the server to tell that it's serving from Ken's computer. Besides that I also modified thet printing format on every client to also tell that it's running from Ken's computer. Lastly, I formatted the message send by the server to include the address of the client sending that message as follows:
+let formatted_message = format!("{addr} : {text}");
+println!("From client {formatted_message:?}");
