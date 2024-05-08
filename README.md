@@ -9,3 +9,4 @@ Explanation: Each time a client is ran using run cargo --bin client, it will sea
 -    client:![alt text](image-4.png)
 -    server: ![alt text](image-5.png)
 Explanation: changing the port to 8080 in both the client and server configurations would still use the WebSocket protocol. The use of the WebSocket protocol is defined in the Rust code by employing the tokio_websockets crate, which handles WebSocket connections regardless of the specific port used, as indicated by the use of ServerBuilder and ClientBuilder from the tokio_websockets crate for establishing WebSocket connections.
+
